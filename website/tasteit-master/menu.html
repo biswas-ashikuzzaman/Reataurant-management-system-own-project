@@ -1,117 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Taste.it - Menu with Cart</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+	<title>Taste.it - Menu with Cart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Taste.<span>it</span></a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item active"><a href="menu.html" class="nav-link">Menu</a></li>
-          <!-- Cart Icon -->
-          <li class="nav-item">
-            <a href="#" class="nav-link" data-toggle="modal" data-target="#cartModal">
-              <i class="fa fa-shopping-cart"></i>
-              Cart (<span id="cart-count">0</span>) - $<span id="cart-total">0.00</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Taste.<span>it</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="chef.html" class="nav-link">Chef</a></li>
+					<li class="nav-item active"><a href="menu.html" class="nav-link">Menu</a></li>
+					<li class="nav-item"><a href="reservation.html" class="nav-link">Reservation</a></li>
+					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+					<!-- Cart Icon -->
+					<li class="nav-item">
+						<a href="#" class="nav-link" data-toggle="modal" data-target="#cartModal">
+							<i class="fa fa-shopping-cart"></i>
+							Cart (<span id="cart-count">0</span>) - $<span id="cart-total">0.00</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-  <!-- Example Menu Item -->
-  <section class="ftco-section">
-    <div class="container">
-      <div class="menus d-flex">
-        <div class="menu-img img" style="background-image: url(images/breakfast-1.jpg); width:100px; height:100px;"></div>
-        <div class="text ml-3">
-          <div class="d-flex">
-            <div class="one-half">
-              <h3>Beef Roast Source</h3>
-            </div>
-            <div class="one-forth">
-              <span class="price">$29</span>
-            </div>
-          </div>
-          <p><span>Meat</span>, <span>Potatoes</span>, <span>Rice</span></p>
-          <button class="btn btn-sm btn-primary add-to-cart" data-name="Beef Roast Source" data-price="29">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+	<!-- Hero -->
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_5.jpg');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text align-items-end justify-content-center">
+				<div class="col-md-9 text-center mb-5">
+					<h1 class="mb-2 bread">Menu</h1>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <!-- Cart Modal -->
-  <div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Your Cart</h5>
-          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody id="cart-items">
-              <!-- items will be added here -->
-            </tbody>
-          </table>
-          <h5 class="text-right">Total: $<span id="modal-total">0.00</span></h5>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Checkout</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+	<!-- Menu Section -->
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+				
+				<!-- ============ Breakfast Section ============ -->
+				<div class="col-md-6 col-lg-4">
+					<div class="menu-wrap">
+						<div class="heading-menu text-center"><h3>Breakfast</h3></div>
+						
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/breakfast-1.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>Pancakes</h3></div><div class="one-forth"><span class="price">$12</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="Pancakes" data-price="12">Add to Cart</button>
+							</div>
+						</div>
 
-  <!-- Scripts -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script>
-    let cart = [];
-    let cartCount = 0;
-    let cartTotal = 0;
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/breakfast-2.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>French Toast</h3></div><div class="one-forth"><span class="price">$15</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="French Toast" data-price="15">Add to Cart</button>
+							</div>
+						</div>
 
-    // Add to Cart
-    $(document).on("click", ".add-to-cart", function() {
-      let name = $(this).data("name");
-      let price = parseFloat($(this).data("price"));
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/breakfast-3.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>Beef Roast</h3></div><div class="one-forth"><span class="price">$29</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="Beef Roast" data-price="29">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
-      cart.push({name, price});
-      cartCount++;
-      cartTotal += price;
+				<!-- ============ Lunch Section ============ -->
+				<div class="col-md-6 col-lg-4">
+					<div class="menu-wrap">
+						<div class="heading-menu text-center"><h3>Lunch</h3></div>
+						
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/lunch-1.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>Grilled Chicken</h3></div><div class="one-forth"><span class="price">$18</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="Grilled Chicken" data-price="18">Add to Cart</button>
+							</div>
+						</div>
 
-      // Update navbar cart
-      $("#cart-count").text(cartCount);
-      $("#cart-total").text(cartTotal.toFixed(2));
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/lunch-2.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>Vegetable Soup</h3></div><div class="one-forth"><span class="price">$10</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="Vegetable Soup" data-price="10">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
-      // Update modal cart list
-      let row = `<tr><td>${name}</td><td>$${price.toFixed(2)}</td></tr>`;
-      $("#cart-items").append(row);
-      $("#modal-total").text(cartTotal.toFixed(2));
-    });
-  </script>
+				<!-- ============ Dinner Section ============ -->
+				<div class="col-md-6 col-lg-4">
+					<div class="menu-wrap">
+						<div class="heading-menu text-center"><h3>Dinner</h3></div>
+						
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/dinner-1.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>Salmon Steak</h3></div><div class="one-forth"><span class="price">$25</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="Salmon Steak" data-price="25">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
+				<!-- ============ Dessert Section ============ -->
+				<div class="col-md-6 col-lg-4">
+					<div class="menu-wrap">
+						<div class="heading-menu text-center"><h3>Desserts</h3></div>
+						
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/dessert-1.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>Chocolate Cake</h3></div><div class="one-forth"><span class="price">$20</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="Chocolate Cake" data-price="20">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ============ Wine Section ============ -->
+				<div class="col-md-6 col-lg-4">
+					<div class="menu-wrap">
+						<div class="heading-menu text-center"><h3>Wine</h3></div>
+						
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/wine-1.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>Red Wine</h3></div><div class="one-forth"><span class="price">$40</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="Red Wine" data-price="40">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ============ Drinks Section ============ -->
+				<div class="col-md-6 col-lg-4">
+					<div class="menu-wrap">
+						<div class="heading-menu text-center"><h3>Drinks</h3></div>
+						
+						<div class="menus d-flex">
+							<div class="menu-img img" style="background-image: url(images/drink-1.jpg);"></div>
+							<div class="text">
+								<div class="d-flex"><div class="one-half"><h3>Lemon Juice</h3></div><div class="one-forth"><span class="price">$8</span></div></div>
+								<button class="btn btn-sm btn-primary add-to-cart" data-name="Lemon Juice" data-price="8">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<!-- Cart Modal -->
+	<div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Your Cart</h5>
+					<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<table class="table table-bordered">
+						<thead>
+							<tr><th>Item</th><th>Price</th><th>Action</th></tr>
+						</thead>
+						<tbody id="cart-items"></tbody>
+					</table>
+					<h5 class="text-right">Total: $<span id="modal-total">0.00</span></h5>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success">Checkout</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		let cart = [];
+		let cartCount = 0;
+		let cartTotal = 0;
+
+		// Add to Cart
+		$(document).on("click", ".add-to-cart", function() {
+			let name = $(this).data("name");
+			let price = parseFloat($(this).data("price"));
+
+			cart.push({name, price});
+			cartCount++;
+			cartTotal += price;
+
+			updateCartUI();
+		});
+
+		// Remove from Cart
+		$(document).on("click", ".remove-item", function() {
+			let index = $(this).data("index");
+			let removed = cart.splice(index, 1)[0];
+			cartCount--;
+			cartTotal -= removed.price;
+			updateCartUI();
+		});
+
+		// Update UI function
+		function updateCartUI() {
+			$("#cart-count").text(cartCount);
+			$("#cart-total").text(cartTotal.toFixed(2));
+
+			$("#cart-items").empty();
+			cart.forEach((item, index) => {
+				let row = `
+					<tr>
+						<td>${item.name}</td>
+						<td>$${item.price.toFixed(2)}</td>
+						<td><button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button></td>
+					</tr>`;
+				$("#cart-items").append(row);
+			});
+			$("#modal-total").text(cartTotal.toFixed(2));
+		}
+	</script>
 </body>
 </html>
