@@ -28,7 +28,7 @@
                         </li>
                         <li>
                             <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                                <i class="fas fa-chart-bar"></i>Make Order</a>
                         </li>
                         <li>
                             <a href="table.html">
